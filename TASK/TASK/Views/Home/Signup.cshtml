@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Signup";
+}
+
+
+<h2>SignUp</h2>
+<form action="" method="post">
+    Name : <input class="form-control" type="text" value="@(Model==null ? "":Model.Name)" name="Name" />
+    <span class="text-danger">@Html.ValidationMessage("Name")</span>
+    <br />
+    User ID : <input class="form-control" type="text" value="@(Model==null ? "":Model.UserId)" name="UserId" />
+    <span class="text-danger">@Html.ValidationMessage("UserId")</span>
+    <br />
+    Password : <input class="form-control" type="text" value="@(Model==null ? "":Model.Password)" name="Password" />
+    <span class="text-danger">@Html.ValidationMessage("Password")</span>
+    <br />
+    ID : <input class="form-control" type="text" value="@(Model==null ? "":Model.ID)" name="ID" />
+    <span class="text-danger">@Html.ValidationMessage("ID")</span>
+    <br />
+    Email : <input class="form-control" type="text" value="@(Model==null ? "":Model.Email)" name="Email" />
+    <span class="text-danger">@Html.ValidationMessage("Email")</span>
+    <br />
+
+    DOB : <input class="form-control" type="date" value="@(Model==null ? "":Model.Dob)" name="Dob" />
+    <span class="text-danger">@Html.ValidationMessage("Dob")</span>
+    <br />
+
+    <input class="btn btn-danger" type="submit" value="Sign Up" />
+
+</form>
