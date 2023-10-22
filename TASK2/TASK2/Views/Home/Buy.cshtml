@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+<h2>BUY</h2>
+<label>
+    <strong>Product List</strong>
+</label>
+<br />
+@foreach (var p in Model)
+{
+    <label>
+        <input type="checkbox" name="product" value="@p.p_name">
+        @p.p_name --- @p.p_price tk
+    </label>
+    <br />
+}
+
+<a class="btn btn-danger" href="/home/AddToCart">AddToCart</a>
+

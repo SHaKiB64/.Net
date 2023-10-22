@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>Products</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>Product Name</th>
+        <th>Product Price (tk)</th>
+        <th>Category</th>
+        <th></th>
+    </tr>
+    @foreach (var p in Model)
+    {
+        <tr>
+            <td>@p.p_name</td>
+            <td>@p.p_price</td>
+            <td>@p.Category.c_name</td>
+            <td> @Html.ActionLink("Add to Cart", "AddToCart")</td>
+        </tr>
+    }
+</table>
+<a class="btn btn-danger" href="/home/Buy">BUY</a>
+<a class="btn btn-outline-primary" href="/home/ShowCart">SHOW CART</a>
